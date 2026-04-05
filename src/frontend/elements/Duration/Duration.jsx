@@ -9,9 +9,9 @@ export const Duration = (props)=>{
 
     
     return (
-        <div className="Duration">
-            { toClock(ms, dec) }
-        </div>
+        <span className="Duration">
+            { toClock(ms, dec) }s
+        </span>
     )
 }
 

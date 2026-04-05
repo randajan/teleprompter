@@ -19,16 +19,20 @@ export const ConfigPage = (props)=>{
     })
     
     return (
-        <Block className="ConfigPage" caption="ConfigPage">
-            <div className="totalDuration">
-                <Duration ms={totalDuration*1000} dec={0}/>
-            </div>
+        <Block className="ConfigPage">
+
             <div className="list">
                 {configGroups}
             </div>
-            <div className="actions">
-                <Button onSubmit={prompts.add}>Add prompt</Button>
-                <Button onSubmit={actions.start}>Start</Button>
+            <div className="pane">
+                <div className="actions">
+                    <Button onSubmit={prompts.add}>Add prompt</Button>
+                    <Button onSubmit={actions.start}>Start</Button>
+                </div>
+                <div className="totalDuration">
+                    <span>Total time </span>
+                    <Duration ms={totalDuration*1000} dec={0}/>
+                </div>
             </div>
         </Block>
     )

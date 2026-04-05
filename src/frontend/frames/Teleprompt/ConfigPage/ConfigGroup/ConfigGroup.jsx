@@ -1,5 +1,6 @@
 import React from 'react';
 import { Block } from "@randajan/jet-react/dom/block";
+import { Caption } from "@randajan/jet-react/dom/caption";
 import { Button, Field, Form } from "@randajan/jet-react/dom/form";
 import crateQueue, { createQueue } from "@randajan/queue";
 
@@ -17,16 +18,19 @@ export const ConfigGroup = (props)=>{
     });
     
     return (
-        <div className="ConfigGroup">
-            <Form className="prompt" rawput={prompt} onInput={onInput}>
-                <Field name="text" type="textarea" autoSize label="Text"/>
-                <Field name="bpm" type="number" label="BPM"/>
-                <Field name="duration" type="number" label="Duration"/>
-            </Form>
+        <Block className="ConfigGroup">
             <div className="actions">
-                <Button onSubmit={actions.remove}>Odebrat</Button>
+                <Caption>#{id+1}</Caption>
+                <Button onSubmit={actions.remove}>Remove</Button>
             </div>
-        </div>
+            <Form className="prompt" rawput={prompt} onInput={onInput}>
+                <div>
+                    <Field name="bpm" type="number" label="BPM"/>
+                    <Field name="duration" type="number" label="Duration"/>
+                </div>
+                <Field name="text" type="textarea" autoSize label="Text"/>
+            </Form>
+        </Block>
     )
 }
 

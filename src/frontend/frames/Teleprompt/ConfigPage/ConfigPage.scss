@@ -1,3 +1,24 @@
 .ConfigPage {
+    position:relative;
+    display:grid;
 
+    width:100%;
+    height:100%;
+
+    grid-template-rows: 1fr auto;
+
+    
+
+
+    .list {
+        border:1px solid black;
+        overflow-y:auto;
+    }
+
+    .pane {
+        display:flex;
+        padding:.5em;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

@@ -1,14 +1,28 @@
 .ConfigGroup {
-    border:1px solid black;
-    display:flex;
-    flex-direction:row-reverse;
-    justify-content: flex-end;
-    align-items: center;
+
+    border:1px dashed gray;
+    padding:.5em;
+    margin:.5em;
+
+
+    .Form.prompt {
+
+        .Field {
+            max-width:100%;
+        }
+
+    }
     
     .actions {
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
         
-    }
-    .prompt {
-        flex-grow:1;
+        gap:1em;
+        
+
+        .Caption {
+            margin:0;
+        }
     }
 }

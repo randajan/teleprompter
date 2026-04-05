@@ -1,0 +1,16 @@
+/node_modules
+/dist
+/demo
+
+/.env*
+.env*
+
+/drive/*
+
+/run.log
+/taken.txt
+/available.txt
+/state.json
+/check.js
+
+

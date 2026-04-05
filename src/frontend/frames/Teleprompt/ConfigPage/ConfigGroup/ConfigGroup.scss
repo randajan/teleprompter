@@ -1,0 +1,14 @@
+.ConfigGroup {
+    border:1px solid black;
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    
+    .actions {
+        
+    }
+    .prompt {
+        flex-grow:1;
+    }
+}

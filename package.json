@@ -1,0 +1,60 @@
+{
+  "name": "teleprompter",
+  "version": "0.2.0",
+  "description": "teleprompter",
+  "repository": "git@github.com:randajan/teleprompter.git",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.7",
+    "@mui/x-date-pickers": "^8.27.0",
+    "@randajan/jet-base": "^2.3.2",
+    "@randajan/jet-core": "^4.1.0",
+    "@randajan/jet-react": "^2.3.0",
+    "@randajan/js-object-view": "^3.2.0",
+    "@randajan/props": "^0.1.2",
+    "@randajan/pulse": "^1.1.4",
+    "@randajan/queue": "^1.0.0",
+    "@randajan/say": "^1.1.2",
+    "@randajan/simple-app": "^6.2.10",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
+    "koa": "^3.1.1",
+    "koa-body": "^7.0.1",
+    "koa-router": "^13.0.1",
+    "koa-send": "^5.0.1",
+    "koa-static": "^5.0.0",
+    "markdown-to-jsx": "^7.4.7",
+    "path-to-regexp": "8.2.0",
+    "react": "^19.1.1",
+    "react-colorful": "^5.6.1",
+    "react-dom": "^19.1.1",
+    "react-transition-group": "^4.4.5"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "game",
+    "destiny"
+  ],
+  "homepage": "https://github.com/randajan/teleprompter",
+  "bugs": {
+    "url": "https://github.com/randajan/teleprompter/issues"
+  },
+  "author": {
+    "name": "Jan Randa",
+    "email": "jnranda@gmail.com",
+    "url": "https://www.linkedin.com/in/randajan/"
+  },
+  "devDependencies": {
+    "esbuild-plugin-import-glob": "^0.1.1",
+    "esbuild-sass-plugin": "^3.3.1"
+  }
+}

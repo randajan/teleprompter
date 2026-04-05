@@ -1,0 +1,14 @@
+.Link {
+    text-decoration: none;
+    font-weight:bold;
+    color:var(--text);
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &[data-flags~=current] {
+        cursor:default;
+        pointer-events:none;
+    }
+}

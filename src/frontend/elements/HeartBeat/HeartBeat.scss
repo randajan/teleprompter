@@ -1,0 +1,81 @@
+.HeartBeat {
+    position:relative;
+    width:2em;
+    height:2em;
+
+    .core, .shockwave {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        animation-iteration-count: infinite;
+        border-radius:100%;
+    }
+
+    .core {
+        border:1px solid black;
+        animation-name:beatCore;
+        animation-timing-function: ease-in;
+    }
+
+    .shockwave {
+        border:1px solid gray;
+        animation-name:beatShockwave;
+        animation-timing-function: ease-out;
+    }
+
+}
+
+@keyframes beatCore {
+    0% {
+        transform:scale(0.7);
+        background-color:#ee0000;
+    }
+
+    10% {
+        transform:scale(1.1);
+        background-color:#FF0000;
+    }
+
+    20% {
+        transform:scale(1);
+        background-color:#FF2222;
+    }
+
+    90% {
+        transform:scale(1);
+        background-color:#FF2222;
+    }
+
+    100% {
+        transform:scale(0.7);
+        background-color:#ee0000;
+    }
+}
+
+@keyframes beatShockwave {
+    0% {
+        transform:scale(1.2);
+        opacity:0;
+    }
+
+    9.99% {
+        transform:scale(1.2);
+        opacity:0;
+    }
+
+
+    10% {
+        transform:scale(1.2);
+        opacity:1;
+    }
+    70% {
+        transform:scale(4);
+        opacity:0;
+    }
+    100% {
+        transform:scale(4);
+        opacity:0;
+    }
+}

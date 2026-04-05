@@ -1,0 +1,62 @@
+.App {
+    position:relative;
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 100%;
+    overflow:hidden;
+
+    --brown:#f4efeb;
+    --blue:#c6dde8;
+    --ink:#3F5066;
+    --text:#2f4157;
+
+    color:#3e5065;
+
+    .slab {
+        width: 100vh;
+        min-width: 70vw;
+        max-width: 100%;
+        margin: auto;
+    }
+    
+    p{
+        font-weight: 200;
+    }
+
+    b{
+        font-weight: 700;
+    }
+
+
+    h1, h2, h3, h4 {
+        display:grid;
+        margin-bottom: calc(.4em + 2vh);
+
+        small {
+            margin-top:.5em;
+            font-weight:normal;
+            font-size:.7em;
+            text-wrap:balance;
+        }
+    }
+
+    h2 {
+        font-size: 2em;
+        color: var(--text);
+        letter-spacing: 2px;
+    }
+    
+    h3 {
+        font-size:1.2em;
+    }
+
+
+    .textHighlight{
+        font-weight: 700;
+    }
+
+    .nowrap {
+        white-space: nowrap;
+    }
+
+}

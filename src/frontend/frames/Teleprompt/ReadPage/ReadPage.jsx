@@ -23,7 +23,8 @@ export const ReadPage = (props)=>{
         countdownMs:3000,
         duration,
         startedAt,
-        onTick:(progress, rMs, cMs)=>{
+        bpm,
+        onTick:(rMs, cMs)=>{
 
             countdownEl.current.innerHTML = !cMs ? "" : `
                 <svg viewBox="0 0 200 50" width="400" height="400">
@@ -33,18 +34,17 @@ export const ReadPage = (props)=>{
                 </svg>`;
 
             remTimeEl.current.innerText = `${toClock(rMs)}s`;
-
-            prgEl.current.style.height = (progress * 100) + "%";
+        },
+        onBeat:(prg, bs)=>{
+            const ts = Math.floor(bs/10)/100;
+            prgEl.current.style.transition = `height ${ts*0.8}s ${ts*0.2}s ease-in-out`;
+            prgEl.current.style.height = ((1 - prg) * 100) + "%";
         }
     });
     
     return (
         <div className="ReadPage">
             <div className="progressBar" ref={prgEl}></div>
-
-            {/* <div className="heartbeat">
-                <HeartBeat bpm={bpm}/>
-            </div> */}
 
             <div className="grid">
                 <div className="text">{text}</div>

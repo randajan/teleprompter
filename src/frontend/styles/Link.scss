@@ -1,14 +1,19 @@
 .Link {
     text-decoration: none;
-    font-weight:bold;
-    color:var(--text);
+    font-weight: 700;
+    color: var(--text);
+    transition: color 120ms ease, text-decoration-color 120ms ease;
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: 0.09em;
 
     &:hover {
+        color: var(--accent-strong);
         text-decoration: underline;
     }
 
     &[data-flags~=current] {
-        cursor:default;
-        pointer-events:none;
+        cursor: default;
+        pointer-events: none;
+        color: var(--ink-500);
     }
 }

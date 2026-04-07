@@ -1,62 +1,78 @@
 .App {
-    position:relative;
-    display:grid;
+    position: relative;
+    display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 100%;
-    overflow:hidden;
+    overflow: hidden;
 
-    --brown:#f4efeb;
-    --blue:#c6dde8;
-    --ink:#3F5066;
-    --text:#2f4157;
+    --brown: #f4efeb;
+    --blue: #c6dde8;
+    --ink: #3f5066;
+    --text: #2f4157;
 
-    color:#3e5065;
+    --ink-900: #163352;
+    --ink-700: #2c5175;
+    --ink-500: #4d6f8f;
+    --surface-0: rgba(255, 255, 255, 0.78);
+    --surface-1: rgba(255, 255, 255, 0.88);
+    --surface-2: rgba(255, 255, 255, 0.93);
+    --line-soft: rgba(28, 70, 107, 0.17);
+    --line-hard: rgba(28, 70, 107, 0.28);
+    --shadow-soft: 0 20px 36px -24px rgba(29, 60, 93, 0.45);
+    --shadow-hard: 0 32px 64px -34px rgba(20, 46, 77, 0.5);
+    --accent: #2d80ff;
+    --accent-strong: #1768df;
+    --danger: #d14c56;
+    --danger-strong: #b33444;
+    --success: #2ca071;
+    --success-strong: #18845a;
+
+    color: var(--ink-700);
+    backdrop-filter: blur(6px);
 
     .slab {
-        width: 100vh;
-        min-width: 70vw;
-        max-width: 100%;
+        width: min(100%, 1080px);
         margin: auto;
     }
-    
-    p{
-        font-weight: 200;
+
+    p {
+        font-weight: 420;
     }
 
-    b{
+    b {
         font-weight: 700;
     }
 
-
     h1, h2, h3, h4 {
-        display:grid;
+        display: grid;
         margin-bottom: calc(.4em + 2vh);
 
         small {
-            margin-top:.5em;
-            font-weight:normal;
-            font-size:.7em;
-            text-wrap:balance;
+            margin-top: .45em;
+            font-weight: 470;
+            font-size: .72em;
+            text-wrap: balance;
+            color: var(--ink-500);
         }
     }
 
     h2 {
-        font-size: 2em;
-        color: var(--text);
-        letter-spacing: 2px;
+        font-size: clamp(1.2rem, 2.8vw, 2rem);
+        color: var(--ink-900);
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
     }
-    
+
     h3 {
-        font-size:1.2em;
+        font-size: clamp(1.05rem, 1.6vw, 1.2rem);
     }
 
-
-    .textHighlight{
+    .textHighlight {
         font-weight: 700;
+        color: var(--ink-900);
     }
 
     .nowrap {
         white-space: nowrap;
     }
-
 }

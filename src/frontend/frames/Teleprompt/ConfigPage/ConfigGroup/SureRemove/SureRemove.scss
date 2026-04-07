@@ -1,17 +1,45 @@
 .SureRemove {
-    display:flex;
-    flex-direction:column;
-    gap:1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
     align-items: center;
-    padding:1em;
+    text-align: center;
+    padding: 1rem;
+    min-width: min(92vw, 28rem);
+    color: var(--ink-900);
+    border-radius: 0.9rem;
+    border: 1px solid rgba(185, 88, 96, 0.38);
+    background: linear-gradient(165deg, rgba(255, 255, 255, 0.97), rgba(255, 244, 245, 0.89));
+    box-shadow: var(--shadow-soft);
 
     .controls {
-        display:Flex;
-        gap:1em;
+        display: flex;
+        gap: 0.65rem;
+    }
+
+    .Button {
+        border: 0;
+        border-radius: 0.64rem;
+        padding: 0.42rem 0.82rem;
+        background: linear-gradient(180deg, #fff, #f6f8fb);
+        box-shadow: inset 0 0 0 1px var(--line-soft);
+    }
+
+    .Button:first-child {
+        color: #fff;
+        background: linear-gradient(180deg, var(--danger), var(--danger-strong));
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.24);
     }
 
     .text {
         font-style: italic;
-        font-size:.8em;
+        font-size: 0.84em;
+        max-height: 7.5rem;
+        overflow: auto;
+        color: var(--ink-500);
+        border-radius: 0.7rem;
+        padding: 0.56rem 0.68rem;
+        background: rgba(255, 255, 255, 0.68);
+        box-shadow: inset 0 0 0 1px rgba(185, 88, 96, 0.18);
     }
 }

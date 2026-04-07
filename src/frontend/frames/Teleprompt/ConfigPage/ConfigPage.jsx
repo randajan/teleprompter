@@ -8,6 +8,7 @@ import "./ConfigPage.scss";
 import { ConfigGroup } from './ConfigGroup/ConfigGroup';
 import { Duration } from '../../../elements/Duration/Duration';
 
+
 export const ConfigPage = (props)=>{
     const { state, prompts, actions } = props;
 
@@ -29,7 +30,9 @@ export const ConfigPage = (props)=>{
             <div className="pane">
                 <div className="actions">
                     <Button onSubmit={prompts.add}>Add prompt</Button>
-                    <Button onSubmit={actions.start}>Start</Button>
+                    <Button onSubmit={actions.save}>Save</Button>
+                    <Button onSubmit={actions.load}>Load</Button>
+                    <Button onSubmit={actions.start}>Start</Button>                    
                 </div>
                 <div className="totalDuration">
                     <span>Total time </span>

@@ -6,6 +6,11 @@
 
 
     .Form.prompt {
+        
+        .numbers {
+            display:flex;
+            gap:1em;
+        }
 
         .Field {
             max-width:100%;

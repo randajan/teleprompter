@@ -1,0 +1,12 @@
+.SelectId {
+    display:flex;
+    flex-direction:column;
+    gap:1em;
+    align-items: center;
+    padding:1em;
+
+    .controls {
+        display:Flex;
+        gap:1em;
+    }
+}

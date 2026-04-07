@@ -1,6 +1,6 @@
 {
   "name": "teleprompter",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "teleprompter",
   "repository": "git@github.com:randajan/teleprompter.git",
   "main": "index.js",

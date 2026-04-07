@@ -4,7 +4,8 @@ import "./SureRemove.scss";
 import { Button } from '@randajan/jet-react/dom/form';
 
 export const SureRemove = (props)=>{
-    const {prompt, actions, pop} = props;
+    const { prompt, pop } = props;
+    const { actions } = prompt;
     
     return (
         <div className="SureRemove">

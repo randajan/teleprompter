@@ -5,7 +5,9 @@ import { Button, Range, Form } from "@randajan/jet-react/dom/form";
 import "./SelectId.scss";
 
 export const SelectId = (props)=>{
-    const {id, lastId, actions, pop} = props;
+    const {id, prompts, prompt, pop} = props;
+    const { lastId } = prompts;
+    const { actions } = prompt;
     const [ newId, setId ] = useState(id);
     
     return (

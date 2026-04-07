@@ -8,17 +8,15 @@ import "./ConfigPage.scss";
 import { ConfigGroup } from './ConfigGroup/ConfigGroup';
 import { Duration } from '../../../elements/Duration/Duration';
 
+const countWords = (str) => str.trim().split(/\s+/).length;
 
 export const ConfigPage = (props)=>{
     const { state, prompts, actions } = props;
 
     const pop = usePop({lock:true});
 
-    let totalDuration = 0;
     const configGroups = prompts.list.map((p, id)=>{
-        totalDuration += Number.jet.to(p.duration);
-        const actions = prompts.bindActions(id);
-        return <ConfigGroup key={id} id={id} lastId={prompts.lastId} prompt={p} actions={actions} pop={pop}/>
+        return <ConfigGroup key={id} id={id} prompts={prompts} prompt={p} pop={pop}/>
     });
     
     return (
@@ -34,9 +32,14 @@ export const ConfigPage = (props)=>{
                     <Button onSubmit={actions.load}>Load</Button>
                     <Button onSubmit={actions.start}>Start</Button>                    
                 </div>
-                <div className="totalDuration">
-                    <span>Total time </span>
-                    <Duration ms={totalDuration*1000} dec={0}/>
+
+                <div className="stats">
+                    <span>Words count:</span>
+                    <div>{prompts.wordsCount}</div>
+                    <span>Average word time:</span>
+                    <Duration ms={prompts.wordDuration*1000} dec={2}/>
+                    <span>Total time:</span>
+                    <Duration ms={prompts.totalDuration*1000} dec={0}/>
                 </div>
             </div>
         </Block>

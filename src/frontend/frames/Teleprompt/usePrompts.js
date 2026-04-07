@@ -11,6 +11,7 @@ const fileStore = new FileStore({
     deserialize: JSON.parse,
 });
 
+const countWords = (str) => (str.match(/\b[\p{L}\p{N}]+\b/gu) || []).length;
 
 export const buildPrompts = (list, onUpdate)=>{
 
@@ -35,7 +36,8 @@ export const buildPrompts = (list, onUpdate)=>{
     }
 
     const move = (id, toId)=>{
-        Array.jet.swap(list, id, toId);
+        const [p] = list.splice(id, 1);
+        list.splice(toId, 0, p);
         onUpdate(list);
     }
 
@@ -50,7 +52,22 @@ export const buildPrompts = (list, onUpdate)=>{
         return r;
     }
 
-    return { list, lastId, add, update, remove, move, bindActions }
+    let totalDuration = 0, wordsCount = 0, wordDuration = 0;
+
+    for (const [id, p] of list.entries()) {
+        p.actions = bindActions(id);
+        p.duration = Number.jet.to(p.duration);
+        p.wordsCount = countWords(p.text);
+        p.wordDuration = p.duration / p.wordsCount;
+
+        wordsCount += p.wordsCount;
+        wordDuration += p.wordDuration;
+        totalDuration += p.duration;
+    }
+
+    wordDuration /= list.length;
+
+    return { list, lastId, totalDuration, wordsCount, wordDuration, add, update, remove, move }
 }
 
 export const useTeleprompt = (base)=>{

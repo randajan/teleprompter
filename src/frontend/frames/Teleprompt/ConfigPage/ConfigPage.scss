@@ -7,8 +7,6 @@
 
     grid-template-rows: 1fr auto;
 
-    
-
 
     .list {
         border:1px solid black;
@@ -20,5 +18,13 @@
         padding:.5em;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .stats {
+        display:grid;
+        grid-template-columns: auto auto;
+        gap: 0 1em;
+        color:gray;
+        font-size:.8em;
     }
 }

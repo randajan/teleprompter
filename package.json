@@ -12,6 +12,7 @@
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^7.3.7",
     "@mui/x-date-pickers": "^8.27.0",
+    "@randajan/browser-files": "^1.0.2",
     "@randajan/jet-base": "^2.3.2",
     "@randajan/jet-core": "^4.1.0",
     "@randajan/jet-react": "^2.3.0",

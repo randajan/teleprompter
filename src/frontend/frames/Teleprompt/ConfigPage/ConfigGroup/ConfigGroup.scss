@@ -1,6 +1,9 @@
 .ConfigGroup {
 
-    border:1px dashed gray;
+    &:not(:first-child) {
+        border-top:3px dashed #ccc;
+    }
+    
     padding:.5em;
     margin:.5em;
 

@@ -582,6 +582,13 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
+"@randajan/browser-files@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@randajan/browser-files/-/browser-files-1.0.2.tgz#9ba9e8f495acada7720a3e175b465df070425ad2"
+  integrity sha512-dCZJ0sl2eHY8xRjekxu257sdMyzNPLT1oimot0HQKm9jcyk+PUbNFYct+X2vTbCed1wEhBYjeugtbSbsAX3EZQ==
+  dependencies:
+    "@randajan/props" "^0.1.4"
+
 "@randajan/jet-base@^2.3.2":
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@randajan/jet-base/-/jet-base-2.3.2.tgz#a18782585cf06b180e03714d65b6dea2d41a7235"

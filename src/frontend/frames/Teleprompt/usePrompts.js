@@ -1,9 +1,9 @@
 import info from "@randajan/simple-app/info";
-import { FileStore } from "../../FileStore";
+import FileIO from "@randajan/browser-files";
 
 const { version } = info;
 
-const fileStore = new FileStore({
+const fileStore = new FileIO({
     defaultFileName: "teleprompt",
     mimeType: "application/json",
     extension: "json",
